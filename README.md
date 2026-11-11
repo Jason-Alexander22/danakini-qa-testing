@@ -1,6 +1,6 @@
 # Danakini Mobile QA Testing (Manual & Automation)
 
-Repositori ini berisi dokumentasi pengujian **Manual** dan skrip **Test Automation** menggunakan **Appium 2.x (UiAutomator2)** dan **Python Pytest** untuk fitur **Register** dan **Login** pada aplikasi Android **Danakini Finance** (`com.dkf.danakinifinance`).
+Automation Testing for Danakini Login Feature
 
 ## Struktur File
 - `conftest.py` : Konfigurasi driver Appium dan capabilities perangkat Android.
@@ -15,9 +15,8 @@ Repositori ini berisi dokumentasi pengujian **Manual** dan skrip **Test Automati
 3. **`TC_Log_Neg_03` (`test_login_negative_unregistered_phone`)**: Menguji input nomor HP yang belum terdaftar (`08123456789`) terhadap validasi halaman `NewLoginActivity`.
 
 ## Ringkasan Temuan Pengujian (Bug / UX Findings)
-1. **Register (`TC_Reg_Pos_01` - OTP Re-registration)**: Ketika pengguna keluar dari halaman OTP dan melakukan registrasi ulang menggunakan Nomor HP dan Email yang sama (jeda 2–3 menit), kode OTP baru tidak terkirim kembali.
-2. **Register (`TC_Reg_Pos_01` - Email Input Cursor)**: Indikator kursor ketik (`|`) pada kolom input Email menghilang saat diklik/diketik sehingga menyulitkan koreksi jika terjadi typo.
-3. **Login (`TC_Log_Neg_03` - Unregistered Phone Navigation)**: Saat memasukkan nomor HP yang belum terdaftar dan menekan tombol Login, sistem tidak menampilkan pesan error di halaman Login (`NewLoginActivity`), melainkan tetap mengarahkan pengguna ke halaman `PinInputActivity`.
+
+3**Login (`TC_Log_Neg_03` - Unregistered Phone Navigation)**: Saat memasukkan nomor HP yang belum terdaftar dan menekan tombol Login, sistem tidak menampilkan pesan error di halaman Login (`NewLoginActivity`), melainkan tetap mengarahkan pengguna ke halaman `PinInputActivity`.
 
 ## Cara Menjalankan Automation Test
 1. Pastikan Appium Server aktif di terminal:
